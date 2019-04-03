@@ -34,4 +34,17 @@ public class OrderedList_inArraySlots implements OrderedList{
          //                   + " at index " + dest);
          list_iAS.add( dest, value);
      }
+     
+     public int remove( int index) {
+ 		return list_iAS.remove(index);
+ 	}
+ 	
+ 	public int get( int index) {
+ 		return list_iAS.get(index);
+ 	}
+ 	
+ 	public int size() {
+ 		return list_iAS.size();
+ 	}
+
 }

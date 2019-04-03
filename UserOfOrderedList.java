@@ -17,12 +17,12 @@ public class UserOfOrderedList {
 
         addOne( "add an element that belongs at the front"
                , -11
-               ,"[-11,-10,]"
+               ,"[-11,-0,]"
                );
 
         addOne( "add an element that belongs at the back"
                , 5
-               ,"[-11,-10,5,]"
+               ,"[-11,-0,5,]"
                );
 
         addOne( "add an element that belongs somewhere in the middle"
@@ -34,11 +34,22 @@ public class UserOfOrderedList {
                , 0
                ,"[-11,0,0,2,5,]"
                );
+        
+        System.out.println( "Size: " + orderedList.size() + " = " + orderedList + System.lineSeparator());
 
-        // addOne( ""
-               // , 
-               // ,""
-               // );
+        // test accessor
+        System.out.println( "sample elements from list:");
+        for( int elemIndex = 1; elemIndex < orderedList.size(); elemIndex *= 2 ) {
+            System.out.println( "element " + elemIndex + ": "
+                              + orderedList.get( elemIndex)
+                              );
+        }
+        
+        // test removing an element
+        System.out.println("removing value " + orderedList.remove( 3)
+                          + ", leaving " + orderedList.size() + " elements:");
+        System.out.println( orderedList);
+        
     }
 
     
